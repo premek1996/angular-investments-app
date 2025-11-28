@@ -1,7 +1,4 @@
 <app-header></app-header>
-<main>
-    <app-investment-input (calculateInvestmentResultsEventEmitter)="onCalculateInvestmentResults($event)"></app-investment-input>
-    @if(investmentInput){
-    <app-investment-results [investmentInput]="investmentInput"/>
-    }
-</main>
+<app-investment-input/>
+<app-investment-results/>
+

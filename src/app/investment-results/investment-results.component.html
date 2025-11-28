@@ -1,3 +1,4 @@
+@if (investmentResults() && investmentResults().length > 0) {
 <table> 
     <thead>
         <tr>
@@ -9,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (investmentResult of investmentResults; track investmentResult.year) {
+        @for (investmentResult of investmentResults(); track investmentResult.year) {
             <tr>
                 <td>{{ investmentResult.year }}</td>
                 <td>{{ investmentResult.valueEndOfYear | currency:'USD':'symbol':'1.2-2' }}</td>
@@ -20,3 +21,6 @@
         }
     </tbody>
 </table>
+} @else {
+    <p class="no-results">Fill in your data above and press <strong>CALCULATE</strong></p>
+}
