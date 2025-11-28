@@ -4,7 +4,7 @@ import { type AnnualData } from './annual-data.model';
 @Injectable({ providedIn: 'root' })
 export class AnnualDataService{
 
-    calculateInvestmentResults(initialInvestment:number, annualInvestment: number, expectedReturn: number, duration: number) {
+    calculateInvestmentResults(initialInvestment:number, annualInvestment: number, expectedReturn: number, duration: number): AnnualData[] {
         const annualData: AnnualData[] = [];
         let investmentValue = initialInvestment;
 
