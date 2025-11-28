@@ -1,1 +1,11 @@
-<h1 class="center">Practice Time!</h1>
+<app-header></app-header>
+<main>
+    <app-user-input (calculateInvestmentResultsEventEmitter)="onCalculateInvestmentResults($event)"></app-user-input>
+    @if(userInput){
+    <app-annual-data [initialInvestment]="userInput.initialInvestment" 
+                     [annualInvestment]="userInput.annualInvestment" 
+                     [expectedReturn]="userInput.expectedReturn" 
+                     [duration]="userInput.duration">
+    </app-annual-data>
+    }
+</main>
