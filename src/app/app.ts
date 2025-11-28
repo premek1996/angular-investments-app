@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
-import { UserInputComponent } from "./user-input/user-input.component";
-import { AnnualDataComponent } from "./annual-data/annual-data.component";
-import { type UserInput } from './user-input/user-input.model';
+import { InvestmentInputComponent } from "./investment-input/investment-input.component";
+import { InvestmentResultsComponent } from "./investment-results/investment-results.component";
+import type { InvestmentInput } from './investment-input/investment-input';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserInputComponent, AnnualDataComponent],
+  imports: [HeaderComponent, InvestmentInputComponent, InvestmentResultsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  userInput!: UserInput;
+  investmentInput!: InvestmentInput;
 
-  onCalculateInvestmentResults(userInput: UserInput) {
-    this.userInput = userInput;
+  onCalculateInvestmentResults(investmentInput: InvestmentInput) {
+    this.investmentInput = investmentInput;
   }
   
 }
